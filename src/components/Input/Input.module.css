@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  height: 48px;
+  padding: 12px 8px 12px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background-color: var(--background-primary);
+  transition: all 0.2s ease-out;
+
+  &:disabled {
+    background-color: var(--background-disabled);
+    cursor: auto;
+  }
+}
+
+.error {
+
+  & input {
+    border: 2px solid;
+    border-color: var(--indicator-error);
+  }
+
+  & p {
+    color: var(--indicator-error);
+  }
+}

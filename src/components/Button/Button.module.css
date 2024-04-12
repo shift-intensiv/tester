@@ -1,0 +1,40 @@
+.button {
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: all 0.2s ease-out;
+}
+
+.contained {
+  height: 56px;
+  padding: 16px 32px;
+  border-color: var(--background-brand);
+  border-radius: 32px;
+  background-color: var(--background-brand);
+  color: var(--text-invert);
+
+  &:hover {
+    border-color: var(--background-hover-primary);
+    background-color: var(--background-hover-primary);
+  }
+
+  &:focus {
+    border: 1px solid;
+    border-color: var(--background-brand-extraLight);
+  }
+
+  &:disabled {
+    border-color: var(--background-brand-extraLight);
+    background-color: var(--background-brand-extraLight);
+    cursor: auto;
+  }
+}
+
+.outlined {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+}
