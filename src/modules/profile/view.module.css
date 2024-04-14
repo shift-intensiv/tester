@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  width: 468px;
+  width: 920px;
   flex-direction: column;
   justify-content: start;
   gap: 24px;
@@ -8,15 +8,14 @@
 }
 
 .fieldset {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 24px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .button_container {
   display: flex;
-  overflow: visible;
-  max-width: 328px;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
   gap: 24px;
 }

@@ -1,17 +1,22 @@
 .button {
+  width: 100%;
+  height: 56px;
+  padding: 16px 32px;
   border: 1px solid;
+  border-radius: 32px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   transition: all 0.2s ease-out;
+
+  &:disabled {
+    cursor: auto;
+  }
 }
 
 .contained {
-  height: 56px;
-  padding: 16px 32px;
   border-color: var(--background-brand);
-  border-radius: 32px;
   background-color: var(--background-brand);
   color: var(--text-invert);
 
@@ -28,13 +33,34 @@
   &:disabled {
     border-color: var(--background-brand-extraLight);
     background-color: var(--background-brand-extraLight);
-    cursor: auto;
+  }
+}
+
+.text {
+  border: none;
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+
+  &:hover {
+    background-color: var(--background-tertiary);
+  }
+
+  &:disabled {
+    color: var(--text-tertiary);
   }
 }
 
 .outlined {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  text-align: left;
+  border-color: var(--border-light);
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+
+  &:hover {
+    background-color: var(--background-tertiary);
+  }
+
+  &:disabled {
+    border-color: var(--border-extraLight);
+    color: var(--text-tertiary);
+  }
 }

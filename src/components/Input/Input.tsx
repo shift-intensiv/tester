@@ -24,17 +24,17 @@ export const Input = React.forwardRef(
     return (
       <div className={clsx(styles.container, { [styles.error]: !!error })}>
         {label && (
-          <label htmlFor={id} className='paragraph14-regular'>
+          <label htmlFor={id} className='paragraph14_regular'>
             {label}
           </label>
         )}
         <Component
-          className={clsx(styles.input, 'paragraph16-regular', className)}
+          className={clsx(styles.input, 'paragraph16_regular', className)}
           {...props}
           id={id}
           ref={ref}
         />
-        {error && <p className={clsx('paragraph14-regular')}>{error}</p>}
+        {error && <p className={clsx('paragraph14_regular')}>{error}</p>}
       </div>
     );
   }

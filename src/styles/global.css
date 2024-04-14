@@ -2,7 +2,7 @@
   background-color: #242424;
   color: rgb(255 255 255 / 87%);
   color-scheme: light dark;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
@@ -15,10 +15,15 @@
   --background-hover-primary: #0052cc;
   --background-brand-extraLight: #cce0ff;
   --background-disabled: #f3f4f6;
+  --background-tertiary: #f9fafb;
   --border-light: #ced2da;
+  --border-extraLight: #e3e5e5;
   --indicator-error: #f64c4c;
   --text-invert: #fff;
   --text-error: #f64c4c;
+  --text-secondary: #344051;
+  --text-tertiary: #637083;
+  --text-quartenery: #97a1af;
 }
 
 body {
@@ -29,7 +34,13 @@ body {
   place-items: center;
 }
 
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
 @media (prefers-color-scheme: light) {
+
   :root {
     background-color: #fff;
     color: #213547;
@@ -38,7 +49,7 @@ body {
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
+  margin: 0 auto;
   text-align: center;
 }

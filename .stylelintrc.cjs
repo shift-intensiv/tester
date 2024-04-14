@@ -5,11 +5,6 @@ module.exports = {
   ...stylelint,
   rules: {
     ...stylelint.rules,
-    'scss/at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: ['tailwind']
-      }
-    ]
+    'custom-property-pattern': null
   }
 };

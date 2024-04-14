@@ -45,6 +45,17 @@ interface SignInDto {
   code: number;
 }
 
+interface UpdateProfileDto {
+  phone: string;
+  profile: {
+    firstname: string;
+    middlename: string;
+    lastname: string;
+    email: string;
+    city: string;
+  };
+}
+
 interface User {
   phone: string;
   firstname?: string;
@@ -57,4 +68,12 @@ interface User {
 interface SignInResponse extends BaseResponse {
   user: User;
   token: string;
+}
+
+interface SessionResponse extends BaseResponse {
+  user: User;
+}
+
+interface UpdateProfileResponse extends BaseResponse {
+  user: User;
 }

@@ -1,4 +1,4 @@
 export const LENGTH = {
-  PHONE: 11,
+  PHONE: 10,
   OTP: 6
 };
