@@ -5,7 +5,6 @@ import { Button, Input, Typography } from '@/components';
 
 import { Countdown } from './components/Countdown/Countdown';
 import { useView } from './hooks/useView';
-import { LENGTH } from './constants';
 
 import styles from './view.module.css';
 
@@ -30,7 +29,6 @@ export const AuthView = () => {
           render={({ field: { onChange, value, ...restField }, fieldState }) => (
             <Input
               {...restField}
-              disabled={state.isLoading}
               placeholder='Телефон'
               format='+7 ### ### ## ##'
               component={PatternFormat}
@@ -42,13 +40,18 @@ export const AuthView = () => {
         />
 
         {state.stage === 'otp' && (
-          <Input
-            type='number'
-            maxLength={LENGTH.OTP}
-            placeholder='Проверочный код'
-            {...form.register('otp')}
-            {...('otp' in form.formState.errors &&
-              form.formState.errors.otp && { error: form.formState.errors.otp.message })}
+          <Controller
+            name='otp'
+            control={form.control}
+            render={({ field, fieldState }) => (
+              <Input
+                {...field}
+                component={PatternFormat}
+                placeholder='Проверочный код'
+                format='######'
+                {...(fieldState.error && { error: fieldState.error.message })}
+              />
+            )}
           />
         )}
 
