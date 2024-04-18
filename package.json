@@ -13,7 +13,8 @@
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "stylelint": "stylelint \"**/*.css\"",
     "pretty": "yarn format && yarn lint --fix && yarn stylelint --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-types": "openapi-ts"
   },
   "lint-staged": {
     "*.css": [
@@ -43,6 +44,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.40.1",
     "@siberiacancode/eslint": "^1.1.0",
     "@siberiacancode/prettier": "^1.1.0",
     "@siberiacancode/stylelint": "^1.0.2",

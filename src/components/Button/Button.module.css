@@ -63,4 +63,40 @@
     border-color: var(--border-extraLight);
     color: var(--text-tertiary);
   }
+
+  &.loading:before {
+    border-top-color: var(--background-brand);
+  }
+}
+
+.loading {
+  position: relative;
+
+  & span {
+    color: transparent;
+  }
+
+  &:before {
+    position: absolute;
+    left: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-top: 2px solid var(--border-light);
+    border-right: 2px solid transparent;
+    margin: 0;
+    animation: 1s spin linear infinite;
+    background: transparent;
+    content: '';
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

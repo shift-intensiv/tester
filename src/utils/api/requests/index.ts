@@ -1,3 +1,11 @@
+import type {
+  CreateOtpDto,
+  OtpResponse,
+  SessionResponse,
+  SignInDto,
+  SignInResponse,
+  UpdateProfileDto
+} from '@/api';
 import { api } from '@/utils/api/instance';
 
 type PostAuthOptParams = CreateOtpDto;

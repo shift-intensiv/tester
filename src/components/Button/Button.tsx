@@ -13,12 +13,13 @@ interface ButtonProps extends React.ComponentProps<'button'> {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant = 'contained', className, loading, ...props }, ref) => (
     <button
-      className={clsx(styles.button, styles[variant], className)}
+      className={clsx(styles.button, styles[variant], { [styles.loading]: loading }, className)}
       type='button'
       {...props}
       ref={ref}
     >
-      {loading ? <>loading</> : <>{children}</>}
+      <span>{children}</span>
+      {loading && <span />}
     </button>
   )
 );

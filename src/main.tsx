@@ -14,7 +14,6 @@ const init = async () => {
   const token = localStorage.getItem(LOCAL_STORAGE_KEYS.TOKEN);
   if (token) {
     const getUsersSessionResponse = await getUsersSession();
-    console.log('@', getUsersSessionResponse);
     useStore.setState({ isLoggedIn: true, user: getUsersSessionResponse.data.user });
   }
 
