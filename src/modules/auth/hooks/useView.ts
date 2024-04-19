@@ -61,7 +61,10 @@ export const useView = () => {
         params: { code: +values.otp, phone }
       });
 
-      if (!postUsersSinginMutationResponse.data.success) {
+      if (
+        !postUsersSinginMutationResponse.data.success &&
+        postUsersSinginMutationResponse.data.reason
+      ) {
         return authForm.setError('otp', { message: postUsersSinginMutationResponse.data.reason });
       }
 
