@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { usePostAuthOptMutation, usePostUsersSinginMutation } from '@/utils/api';
+import { useOtpsControllerCreateOtp, useUsersControllerSignin } from '@/api/instance';
 import { LOCAL_STORAGE_KEYS } from '@/utils/constants';
 import { useStore } from '@/utils/store';
 
@@ -35,12 +35,12 @@ export const useView = () => {
     }
   }, [phone]);
 
-  const postAuthOptMutation = usePostAuthOptMutation();
-  const postUsersSinginMutation = usePostUsersSinginMutation();
+  const otpsControllerCreateOtpMutation = useOtpsControllerCreateOtp();
+  const usersControllerSignin = useUsersControllerSignin();
 
   const sendOtp = async (phone: string) => {
-    const postAuthOptMutationResponse = await postAuthOptMutation.mutateAsync({
-      params: { phone }
+    const postAuthOptMutationResponse = await otpsControllerCreateOtpMutation.mutateAsync({
+      data: { phone }
     });
 
     setSubmittedPhones({
@@ -57,8 +57,8 @@ export const useView = () => {
     }
 
     if (stage === 'otp' && 'otp' in values) {
-      const postUsersSinginMutationResponse = await postUsersSinginMutation.mutateAsync({
-        params: { code: +values.otp, phone }
+      const postUsersSinginMutationResponse = await usersControllerSignin.mutateAsync({
+        data: { code: +values.otp, phone }
       });
 
       if (

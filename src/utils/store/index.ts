@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import type { User } from '@/api';
+import type { User } from '@/api/instance';
 
 interface StoreState {
   isLoggedIn: boolean;

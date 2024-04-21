@@ -56,7 +56,7 @@ export const AuthView = () => {
         )}
 
         <div className={styles.button_container}>
-          <Button type='submit' loading={state.isLoading}>
+          <Button type='submit' loading disabled>
             Войти
           </Button>
 

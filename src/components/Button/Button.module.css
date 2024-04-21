@@ -30,7 +30,7 @@
     border-color: var(--background-brand-extraLight);
   }
 
-  &:disabled {
+  &:disabled:not(.loading) {
     border-color: var(--background-brand-extraLight);
     background-color: var(--background-brand-extraLight);
   }
@@ -45,7 +45,7 @@
     background-color: var(--background-tertiary);
   }
 
-  &:disabled {
+  &:disabled:not(.loading) {
     color: var(--text-tertiary);
   }
 }
@@ -59,7 +59,7 @@
     background-color: var(--background-tertiary);
   }
 
-  &:disabled {
+  &:disabled:not(.loading) {
     border-color: var(--border-extraLight);
     color: var(--text-tertiary);
   }

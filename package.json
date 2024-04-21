@@ -1,11 +1,8 @@
 {
-  "name": "test",
+  "name": "shift-intensiv-tester",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "imports": {
-    "@/*": "./src/*"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,7 +11,8 @@
     "stylelint": "stylelint \"**/*.css\"",
     "pretty": "yarn format && yarn lint --fix && yarn stylelint --fix",
     "preview": "vite preview",
-    "generate-types": "openapi-ts"
+    "generate-types": "openapi-ts",
+    "generate-types2": "orval --config ./orval.config.ts"
   },
   "lint-staged": {
     "*.css": [
@@ -44,7 +42,6 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@hey-api/openapi-ts": "^0.40.1",
     "@siberiacancode/eslint": "^1.1.0",
     "@siberiacancode/prettier": "^1.1.0",
     "@siberiacancode/stylelint": "^1.0.2",
@@ -54,6 +51,7 @@
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "orval": "^6.27.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
