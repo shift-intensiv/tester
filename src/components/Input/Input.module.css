@@ -19,7 +19,6 @@
 }
 
 .error {
-
   & input {
     border: 2px solid;
     border-color: var(--indicator-error);
