@@ -20,13 +20,15 @@ export const useView = () => {
     resolver: zodResolver(profileFormScheme)
   });
 
-  const onSubmit = profileForm.handleSubmit(async (values) => {
+  const onSubmit = profileForm.handleSubmit(async ({ middlename, ...values }) => {
     await usersControllerUpdate.mutateAsync({
       data: { phone: user.phone, profile: values }
     });
   });
 
   const onLogout = () => {
+    if (Math.random() < 0.3) throw new Error('Something went wrong, something of undefined');
+
     localStorage.removeItem(LOCAL_STORAGE_KEYS.TOKEN);
     useStore.setState({ isLoggedIn: false, user: {} as User });
   };

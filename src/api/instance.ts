@@ -64,11 +64,6 @@ export interface UpdateProfileProfileDto {
    * @nullable
    */
   lastname: string | null;
-  /**
-   * Отчество
-   * @nullable
-   */
-  middlename: string | null;
 }
 
 export interface UpdateProfileDto {
