@@ -48,7 +48,7 @@ export const AuthView = () => {
                 {...field}
                 component={PatternFormat}
                 placeholder='Проверочный код'
-                format='########################'
+                format='#######'
                 {...(fieldState.error && { error: fieldState.error.message })}
               />
             )}
