@@ -6,7 +6,7 @@ export const otpFormScheme = z.object({
     .min(1, {
       message: 'Поле обязательно для заполнения'
     })
-    .min(6, {
+    .refine((data) => data.trim().length >= 6, {
       message: 'Код должен содержать 6 цифр'
     })
 });

@@ -1,7 +1,5 @@
 :root {
-  background-color: #242424;
-  color: rgb(255 255 255 / 87%);
-  color-scheme: light dark;
+  color-scheme: light;
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,13 +35,6 @@ body {
 .container {
   max-width: 1170px;
   margin: auto;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: #fff;
-    color: #213547;
-  }
 }
 
 #root {

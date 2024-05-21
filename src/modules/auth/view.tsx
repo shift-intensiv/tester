@@ -35,6 +35,7 @@ export const AuthView = () => {
               value={value.substring(1)}
               onChange={(event) => onChange(event.target.value.replace('+', '').replace(/ /g, ''))}
               {...(fieldState.error && { error: fieldState.error.message })}
+              {...(value === '72282881488' && { error: 'нет это не пасхалка' })}
             />
           )}
         />
