@@ -33,7 +33,7 @@ export const Countdown = ({ endTime, onRetry, loading = false }: CountdownProps)
 
   return (
     <Typography tag='p' variant='paragraph14_regular' className={styles.text}>
-      Запросить код повторно можно через {seconds} секунд
+      Отправить код повторно через {seconds} секунд
     </Typography>
   );
 };

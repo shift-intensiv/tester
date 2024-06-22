@@ -58,7 +58,7 @@ export const AuthView = () => {
 
         <div className={styles.button_container}>
           <Button type='submit' loading={state.isLoading}>
-            Войти
+            {state.stage === 'otp' ? 'Войти' : 'Продолжить'}
           </Button>
 
           {state.stage === 'otp' && state.submittedPhones[state.phone] && (
